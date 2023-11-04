@@ -1,0 +1,46 @@
+
+
+/* Main Stylesheet */
+
+
+/* Common Styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	transition: all .4s ease-in-out;
+	scroll-behavior:smooth;
+}
+
+html {
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: crimson;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+li:hover {
+	cursor: pointer;
+}
+
+button {
+	padding: .5em .8em;
+	background-color: #333;
+	color: seashell;
+	border: 1px solid seashell;
+	transition: all .5s ease-in-out;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: seashell;
+	color: #333;
+	border: 1px solid #333;
+}
+/* Common Styles end */
