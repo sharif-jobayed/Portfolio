@@ -266,7 +266,7 @@ h6 {
 }
 
 #preview_shadow:hover {
-	transform: scale(1.05);
+	transform: scale(1.03);
 }
 
 #preview {
@@ -355,7 +355,7 @@ h6 {
 }
 
 #skills li:hover {
-	transform: scale(1.05);
+	transform: scale(1.03);
 	/* text-transform: uppercase; */
 	/* border-bottom: 1px solid var(--bordercColor); */
 	/* background-color: var(--themeDotBorder); */
@@ -382,7 +382,7 @@ h6 {
 .fiverr-seller-widget {}
 
 .fiverr-seller-widget:hover {
-	transform: scale(1.1);
+	transform: scale(1.03);
 }
 
 .post_wrapper {
@@ -403,7 +403,7 @@ h6 {
 }
 
 .post:hover {
-	transform: scale(1.05);
+	transform: scale(1.03);
 	cursor: pointer;
 }
 
@@ -472,7 +472,7 @@ h6 {
 }
 
 .contact_form:hover {
-	transform: scale(1.05);
+	transform: scale(1.03);
 }
 
 .contact_form h3 {
@@ -527,7 +527,7 @@ h6 {
 }
 
 .social_links:hover {
-	transform: scale(1.05);
+	transform: scale(1.03);
 }
 
 #social_img {
