@@ -1,336 +1,284 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Sharif Jobayed">
 	<meta name="description"
-		content="Sharif Jobayed's portfolio showcasing skills in web development and software testing based in Dhaka, Bangladesh.">
-	<meta name="keywords" content="web developer, software tester, frontend developer, SQA engineer, Dhaka, Bangladesh">
+		content="Sharif Jobayed &mdash; SQA Engineer and frontend developer based in Dhaka, Bangladesh, available for freelance web development and software quality assurance work.">
+	<meta name="keywords"
+		content="SQA engineer, software tester, test automation, frontend developer, Selenium, WebdriverIO, Playwright, Dhaka, Bangladesh, freelancer">
 	<meta name="robots" content="index, follow">
-	<title>Sharif Jobayed - Web Developer & Software Tester | Portfolio</title>
+	<title>Sharif Jobayed &mdash; SQA Engineer &amp; Frontend Developer</title>
 
-	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
 		rel="stylesheet">
-	<!--Local Stylesheet-->
-	<link id="" rel="stylesheet" href="./assets/styles/main.css">
-	<link id="color_scheme" rel="stylesheet" href="./assets/styles/default.css">
-	<link rel="icon" href="./assets/images/logos_&_icons/sj_logos_&_banners/favicon.png">
-	<!--Local Stylesheet ends-->
+
+	<link rel="stylesheet" href="./assets/styles/main.css">
+	<link rel="icon"
+		href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23008080'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ESJ%3C/text%3E%3C/svg%3E">
 </head>
 
 <body>
-	<!-- Full Page -->
-	<div id="full_page">
 
-		<section class="s1">
-			<div class="main-container">
-				<div class="greeting_wrapper" id="page_top">
-					<h1>Hi, I'm Sharif Jobayed!</h1>
-				</div>
+	<header class="site_header">
+		<div class="wrap header_inner">
+			<a href="#top" class="brand">Sharif<span>.</span>Jobayed</a>
 
-				<!-- Intro -->
-				<div class="intro_wrapper">
-					<div class="nav_wrapper">
-						<div class="dots_wrapper">
-							<span class="browser_dot" id="dot1"></span>
-							<span class="browser_dot" id="dot2"></span>
-							<span class="browser_dot" id="dot3"></span>
-						</div>
+			<nav class="site_nav" id="site_nav">
+				<a href="#about">About</a>
+				<a href="#skills">Skills</a>
+				<a href="#services">Services</a>
+				<a href="#contact">Contact</a>
+			</nav>
 
-						<ul id="navigation">
-							<li><a href="#contact" target="">Contact</a></li>
-						</ul>
-					</div>
+			<button class="nav_toggle" id="nav_toggle" aria-label="Toggle navigation" aria-expanded="false">
+				<span></span><span></span><span></span>
+			</button>
+		</div>
+	</header>
 
-					<div class="left_column">
-						<canvas id="profile_pic"></canvas>
+	<main id="top">
 
-						<h5>Personalize Theme</h5>
-
-						<div id="theme_options_wrapper">
-							<span data-mode="default" class="theme_dot" id="light_mode"></span>
-							<span data-mode="blue" class="theme_dot" id="blue_mode"></span>
-							<span data-mode="green" class="theme_dot" id="green_mode"></span>
-							<span data-mode="purple" class="theme_dot" id="purple_mode"></span>
-						</div>
-
-						<p id="settings_note">
-							<!-- *Theme settings will be saved for your next visit. -->
-						</p>
-					</div>
-
-					<div class="right_column">
-
-						<div id="preview_shadow">
-							<div id="preview">
-
-								<div class="corner" id="corner_tr"></div>
-								<div class="corner" id="corner_tl"></div>
-
-								<p>
-									“The two most important days in your life are the day you are born and the day you find out why.”
-								</p>
-								<h3> —Mark Twain</h3>
-
-								<div class="corner" id="corner_br"></div>
-								<div class="corner" id="corner_bl"></div>
-
-							</div>
-						</div>
-
+		<!-- Hero -->
+		<section class="hero">
+			<div class="wrap hero_inner">
+				<div class="hero_text reveal">
+					<p class="eyebrow">SQA Engineer &amp; Frontend Developer</p>
+					<h1>Hi, I'm Sharif Jobayed.</h1>
+					<p class="hero_lede">
+						I help teams ship reliable software &mdash; testing it thoroughly and building the
+						front end that runs it. Based in Dhaka, Bangladesh, and open for freelance work.
+					</p>
+					<div class="hero_actions">
+						<a href="#contact" class="btn btn_primary">Get in touch</a>
+						<a href="#about" class="btn btn_ghost">More about me</a>
 					</div>
 				</div>
-				<!-- Intro ends -->
+
+				<div class="hero_media reveal">
+					<div class="portrait_frame">
+						<img src="./assets/images/me.jpg" alt="Portrait of Sharif Jobayed" class="portrait">
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<!-- About -->
-		<section class="s2">
-			<div class="main-container">
-				<div class="about_wrapper">
+		<section class="section" id="about">
+			<div class="wrap">
+				<h2 class="section_title">About me</h2>
+				<div class="about_grid reveal">
+					<p class="about_text">
+						I graduated in English Language and Literature in 2008, then retrained in web
+						development and, since 2022, in software quality assurance &mdash; picking up
+						certifications along the way in HTML5, CSS3, modern JavaScript (ES6+), React,
+						and Java (OOP), alongside test tooling like Selenium WebDriver, WebdriverIO,
+						Playwright, TestNG, Cucumber, and Mocha.
+					</p>
+					<p class="about_text">
+						I've worked as an SQA Engineer across a few organizations, combining manual and
+						automated testing with hands-on frontend development. I'm now looking to take on
+						freelance projects and explore starting something of my own, putting that
+						full-stack view of building <em>and</em> breaking software to work for clients
+						directly.
+					</p>
 
-					<div class="about_me">
-						<div id="hls1">
-							<h4>About me</h4>
-							<p>
-								Hi! I'm Sharif Jobayed, a skilled automation tester and frontend developer with expertise in
-								WebdriverIO, Cucumber, Selenium WebDriver, and Allure Report for automation. I also specialize in HTML,
-								CSS, JavaScript, and ReactJS for frontend development. My focus is on creating robust test scripts and
-								developing user-friendly, responsive web applications. Let's work together to enhance your software's
-								quality and user experience!
-							</p>
+					<dl class="about_facts">
+						<div>
+							<dt>Based in</dt>
+							<dd>Dhaka, Bangladesh</dd>
 						</div>
-						<hr>
-
-						<div id="hls2">
-							<h4>Top Expertise</h4>
-
-							<div id="skills">
-								<ul>
-									<li><a href="https://en.wikipedia.org/wiki/Front-end_web_development" target="_blank">Frontend
-											Development</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">HTML5</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer">CSS3</a>
-									</li>
-									<li><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"
-											rel="noopener noreferrer">JavaScript</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" target="_blank"
-											rel="noopener noreferrer">ReactJS</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank"
-											rel="noopener noreferrer">Java</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/WordPress" target="_blank"
-											rel="noopener noreferrer">WordPress</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/Git" target="_blank" rel="noopener noreferrer">Git</a></li>
-								</ul>
-								<ul>
-									<li><a href="https://en.wikipedia.org/wiki/Software_testing" target="_blank"
-											rel="noopener noreferrer">Software Testing</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/Selenium_(software)" target="_blank"
-											rel="noopener noreferrer">Selenium Webdriver</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/TestNG" target="_blank"
-											rel="noopener noreferrer">TestNG</a></li>
-									<li><a href="https://webdriver.io/docs/why-webdriverio" target="_blank"
-											rel="noopener noreferrer">WebdriverIO</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/Cucumber_(software)" target="_blank"
-											rel="noopener noreferrer">Cucumber</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/Mocha_(JavaScript_framework)" target="_blank"
-											rel="noopener noreferrer">Mocha (JavaScript framework)</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/Jenkins_(software)" target="_blank"
-											rel="noopener noreferrer">Jenkins</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/BrowserStack" target="_blank"
-											rel="noopener noreferrer">BrowserStack</a></li>
-									<li><a href="https://allurereport.org/" target="_blank" rel="noopener noreferrer">Allure Report</a>
-									</li>
-								</ul>
-							</div>
-
-							<p>
-								Want to know details about me? You may request for My Resume <a href="#contact" target="">here</a>.
-							</p>
+						<div>
+							<dt>Focus</dt>
+							<dd>SQA &amp; Frontend Development</dd>
 						</div>
-
-					</div>
-
-					<div id="fiverr">
-
-						<!-- Put this code anywhere in the body of your page where you want the badge to show up. -->
-
-						<div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget'
-							style='display: inline-block;'>
-							<a itemprop='url' href=https://www.fiverr.com/sharif_jobayed rel="nofollow" target="_blank"
-								style='display: inline-block;'>
-								<div class='fiverr-seller-content'
-									id='fiverr-seller-widget-content-830b1129-801b-40b8-bb86-631dfc592e02' itemprop='contentURL'
-									style='display: none;'></div>
-								<div id='fiverr-widget-seller-data' style='display: none;'>
-									<div itemprop='name'>sharif_jobayed</div>
-									<div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
-									<div itemprop='jobtitle'>Seller</div>
-									<div itemprop='description'>Hi, I'm Sharif Jobayed, a Software Tester specializing in WebdriverIO,
-										Cucumber, Chai, and Allure Report. With experience in developing and maintaining automated test
-										scripts, I ensure top-notch software quality and reliability.
-										I'm dedicated to helping you achieve your testing goals efficiently and effectively. Let's work
-										together to elevate your software testing process!</div>
-								</div>
-							</a>
+						<div>
+							<dt>Available for</dt>
+							<dd>Freelance &amp; contract work</dd>
 						</div>
-
-						<script id='fiverr-seller-widget-script-830b1129-801b-40b8-bb86-631dfc592e02'
-							src='https://widgets.fiverr.com/api/v1/seller/sharif_jobayed?widget_id=830b1129-801b-40b8-bb86-631dfc592e02'
-							data-config='{"category_name":"Programming \u0026 Tech"}' async='true' defer='true'></script>
-
-					</div>
-
+					</dl>
 				</div>
 			</div>
 		</section>
-		<!-- About ends -->
 
-		<!-- Portfolio -->
-		<section class="s1">
-			<div class="main-container">
-				<div class="post_wrapper">
-					<div class="post" id="post_1">
-						<canvas class="thumbnail" id="card_1"></canvas>
-						<div class="post_preview">
-							<h6 class="post_title">Business Websites</h6>
-							<p class="post_intro">
-								If you are looking for a professional website you are now at the right place. I can build professional
-								websites for your business as per your requirements from scratch using Raw Codes or CMS. Just provide me
-								with your content and requirements and I will materialize your website in a fair deal.
-							</p>
-						</div>
+		<!-- Skills -->
+		<section class="section section_alt" id="skills">
+			<div class="wrap">
+				<h2 class="section_title">Skills &amp; certifications</h2>
+
+				<div class="skills_grid">
+					<div class="skill_card reveal">
+						<h3>Frontend Development</h3>
+						<ul class="tag_list">
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML5</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">CSS3</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">JavaScript (ES6+)</a></li>
+							<li><a href="https://react.dev/" target="_blank" rel="noopener noreferrer">React</a></li>
+						</ul>
 					</div>
 
-					<div class="post" id="post_2">
-						<canvas class="thumbnail" id="card_2"></canvas>
-						<div class="post_preview">
-							<h6 class="post_title">Portfolio Sites</h6>
-							<p class="post_intro">
-								If you are looking to build your portfolio I can offer you building an eye-catching portfolio site as
-								per your exposure. <br />
-								Whether you need a portfolio for your business or for personal needs, I can get that done in a
-								reasonable deal.
-							</p>
-						</div>
+					<div class="skill_card reveal">
+						<h3>Programming</h3>
+						<ul class="tag_list">
+							<li><a href="https://dev.java/" target="_blank" rel="noopener noreferrer">Java</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank" rel="noopener noreferrer">Object-Oriented Programming</a></li>
+						</ul>
 					</div>
 
-					<div class="post" id="post_3">
-						<canvas class="thumbnail" id="card_3"></canvas>
-						<div class="post_preview">
-							<h6 class="post_title">SQA</h6>
-							<p class="post_intro">
-								My comprehensive software testing services ensure the reliability and quality of your software. I offer
-								rigorous testing methodologies, automation, and Bug/Defect reporting to detect and resolve issues,
-								enhancing your software's performance and user satisfaction.
-							</p>
-						</div>
+					<div class="skill_card reveal">
+						<h3>Test Automation</h3>
+						<ul class="tag_list">
+							<li><a href="https://www.selenium.dev/" target="_blank" rel="noopener noreferrer">Selenium WebDriver</a></li>
+							<li><a href="https://webdriver.io/" target="_blank" rel="noopener noreferrer">WebdriverIO</a></li>
+							<li><a href="https://playwright.dev/" target="_blank" rel="noopener noreferrer">Playwright</a></li>
+							<li><a href="https://testng.org/" target="_blank" rel="noopener noreferrer">TestNG</a></li>
+							<li><a href="https://cucumber.io/" target="_blank" rel="noopener noreferrer">Cucumber</a></li>
+							<li><a href="https://mochajs.org/" target="_blank" rel="noopener noreferrer">Mocha</a></li>
+						</ul>
 					</div>
 
-					<div class="post" id="post_4">
-						<canvas class="thumbnail" id="card_4"></canvas>
-						<div class="post_preview">
-							<h6 class="post_title">Website Features</h6>
-							<p class="post_intro">
-							<ul>
-								<li>Your website will work at any screen size or resolution (Responsive Webpage).</li>
-								<li>All contents provided by you will be placed and designed as per your requirement.</li>
-								<li>The finished website will be all modern browser compatible.</li>
-								<!-- <li>Free support for 1 week free of cost.</li> -->
-								<br />
-								<h6>*The website building duration may vary according to your feature/design requirements.</h6>
-							</ul>
-							</p>
-						</div>
-					</div>
-
-					<div class="post" id="post_5">
-						<canvas class="thumbnail" id="card_5"></canvas>
-						<div class="post_preview">
-							<h6 class="post_title">WordPress Development</h6>
-							<p class="post_intro">
-								I offer expert WordPress website development. A Customized design, responsive layout, SEO optimization,
-								and user-friendly features for a powerful online presence. Let's bring your vision to life!
-							</p>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-		<!-- Portfolio ends -->
-
-
-		<!-- Contact -->
-		<section class="s2">
-			<div class="main-container">
-				<div id="contact">
-					<div class="contact_form">
-						<h3>Get in Touch</h3>
-						<form method="POST" action="https://formsubmit.co/sharif.jobayed@gmail.com" id="cf_fields">
-							<!-- Name -->
-							<label for="name">Name</label>
-							<input type="text" name="name" placeholder="Your Name" class="cf_field" required>
-
-							<!-- Subject -->
-							<label for="subject">Subject</label>
-							<input type="text" name="subject" placeholder="Subject" class="cf_field" required>
-
-							<!-- Email -->
-							<label for="email">Email</label>
-							<input type="email" name="email" placeholder="Your Email" class="cf_field sendersEmail" required>
-
-							<!-- Message -->
-							<label for="message">Message</label>
-							<textarea name="message" placeholder="Your Message" required></textarea>
-
-							<!-- Send -->
-							<button type="submit" id="submit_btn">Send</button>
-						</form>
-					</div>
-
-					<div class="social_links">
-						<canvas id="social_img"></canvas>
-						<h3>My Social Presence</h3>
-						<ul>
-							<li><a href="https://www.facebook.com/sharif.jobayed" target="_blank"><img
-										src="./assets/images/logos_&_icons/social_icons/facebook.png"></a></li>
-							<li><a href="https://www.linkedin.com/in/sharif-jobayed/" target="_blank"><img
-										src="./assets/images/logos_&_icons/social_icons/linkedin.png"></a></li>
-							<li><a href="https://www.instagram.com/sharif.jobayed/" target="_blank"><img
-										src="./assets/images/logos_&_icons/social_icons/instagram.png"></a></li>
-							<li><a href="https://github.com/sharif-jobayed" target="_blank"><img
-										src="./assets/images/logos_&_icons/social_icons/github.png"></a></li>
+					<div class="skill_card reveal">
+						<h3>Quality Assurance</h3>
+						<ul class="tag_list">
+							<li><a href="https://en.wikipedia.org/wiki/Software_testing" target="_blank" rel="noopener noreferrer">Software Manual Testing</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Test_case" target="_blank" rel="noopener noreferrer">Test Case Design</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Software_bug" target="_blank" rel="noopener noreferrer">Bug &amp; Defect Reporting</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- Contact ends -->
 
-		<!-- Footer -->
-		<footer>
-			<section class="s1">
-				<div class="main-container" id="footer">
-					<p>
-					<h5>Portfolio &copy; made by <a href="#page_top" target=""><span id="s">Sharif</span> <span
-								id="j">Jobayed</span></a></h5>
-					</p>
+		<!-- Services -->
+		<section class="section" id="services">
+			<div class="wrap">
+				<h2 class="section_title">What I can do for you</h2>
+
+				<div class="services_grid">
+					<div class="service_card reveal">
+						<h3>Frontend Development</h3>
+						<p>Responsive, modern websites built with HTML5, CSS3, JavaScript, and React
+							&mdash; from landing pages to full portfolio sites.</p>
+					</div>
+
+					<div class="service_card reveal">
+						<h3>Test Automation</h3>
+						<p>Automated test suites with Selenium WebDriver, WebdriverIO, or Playwright,
+							paired with TestNG, Cucumber, or Mocha for readable, maintainable coverage.</p>
+					</div>
+
+					<div class="service_card reveal">
+						<h3>Manual &amp; QA Testing</h3>
+						<p>Thorough manual testing, test case design, and clear bug/defect reporting to
+							catch issues before your users do.</p>
+					</div>
 				</div>
-			</section>
-		</footer>
-		<!-- Footer ends -->
-	</div>
-	<!-- Full Page ends -->
+			</div>
+		</section>
 
-	<!--Local Javascript-->
-	<script type="text/javascript" src="./assets/scripts/main.js"></script>
-	<script src="./assets/scripts/theme_switcher_org.js" type="text/javascript"></script>
-	<!--Local Javascript ends-->
+		<!-- Contact -->
+		<section class="section section_alt" id="contact">
+			<div class="wrap contact_grid">
+				<div class="contact_form_wrapper reveal">
+					<h2 class="section_title">Get in touch</h2>
+					<form method="POST" action="https://formsubmit.co/sharif.jobayed@gmail.com" class="contact_form">
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" placeholder="Your name" required>
+
+						<label for="subject">Subject</label>
+						<input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+
+						<label for="message">Message</label>
+						<textarea id="message" name="message" placeholder="Tell me about your project" required></textarea>
+
+						<button type="submit" class="btn btn_primary">Send message</button>
+					</form>
+				</div>
+
+				<div class="contact_links reveal">
+					<h3>Reach me directly</h3>
+					<ul class="link_list">
+						<li>
+							<a href="mailto:sharif.jobayed@gmail.com" class="link_card">
+								<span class="link_icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								</span>
+								<span class="link_body">
+									<span class="link_label">Email</span>
+									<span class="link_value">sharif.jobayed@gmail.com</span>
+								</span>
+								<span class="link_arrow" aria-hidden="true">&rarr;</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/sharif-jobayed/" target="_blank" rel="noopener noreferrer" class="link_card">
+								<span class="link_icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"><path d="M6.94 8.5H4V20h2.94V8.5ZM5.47 6.9a1.7 1.7 0 1 0 0-3.4 1.7 1.7 0 0 0 0 3.4ZM20 20v-6.4c0-3.06-1.63-4.48-3.81-4.48-1.76 0-2.55.97-2.99 1.65V8.5H10.26c.04.86 0 11.5 0 11.5h2.94v-6.42c0-.34.02-.68.13-.93.28-.68.9-1.39 1.96-1.39 1.38 0 1.93 1.05 1.93 2.6V20H20Z" fill="currentColor"/></svg>
+								</span>
+								<span class="link_body">
+									<span class="link_label">LinkedIn</span>
+									<span class="link_value">/in/sharif-jobayed</span>
+								</span>
+								<span class="link_arrow" aria-hidden="true">&rarr;</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/sharif-jobayed" target="_blank" rel="noopener noreferrer" class="link_card">
+								<span class="link_icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5.01 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.71 1.03 1.6 1.03 2.7 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
+								</span>
+								<span class="link_body">
+									<span class="link_label">GitHub</span>
+									<span class="link_value">@sharif-jobayed</span>
+								</span>
+								<span class="link_arrow" aria-hidden="true">&rarr;</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/sharif.jobayed" target="_blank" rel="noopener noreferrer" class="link_card">
+								<span class="link_icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"><path d="M13.5 21v-7.2h2.4l.5-3h-2.9V9c0-.83.26-1.4 1.5-1.4h1.5V5.1c-.5-.06-1.4-.17-2.32-.17-2.3 0-3.68 1.35-3.68 3.83v2.05H8v3h2.5V21h3Z" fill="currentColor"/></svg>
+								</span>
+								<span class="link_body">
+									<span class="link_label">Facebook</span>
+									<span class="link_value">sharif.jobayed</span>
+								</span>
+								<span class="link_arrow" aria-hidden="true">&rarr;</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/sharif.jobayed/" target="_blank" rel="noopener noreferrer" class="link_card">
+								<span class="link_icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.6"/><circle cx="16.9" cy="7.1" r="1" fill="currentColor"/></svg>
+								</span>
+								<span class="link_body">
+									<span class="link_label">Instagram</span>
+									<span class="link_value">@sharif.jobayed</span>
+								</span>
+								<span class="link_arrow" aria-hidden="true">&rarr;</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="site_footer">
+		<div class="wrap">
+			<p>&copy; <span id="year"></span> Sharif Jobayed. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="./assets/scripts/main.js"></script>
 </body>
 
 </html>
