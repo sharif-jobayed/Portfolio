@@ -10,7 +10,61 @@
 	<meta name="keywords"
 		content="SQA engineer, software tester, test automation, frontend developer, Selenium, WebdriverIO, Playwright, Dhaka, Bangladesh, freelancer">
 	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="https://sharif-jobayed.github.io/Portfolio/">
 	<title>Sharif Jobayed &mdash; SQA Engineer &amp; Frontend Developer</title>
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="profile">
+	<meta property="og:url" content="https://sharif-jobayed.github.io/Portfolio/">
+	<meta property="og:title" content="Sharif Jobayed — SQA Engineer & Frontend Developer">
+	<meta property="og:description"
+		content="SQA Engineer and frontend developer based in Dhaka, Bangladesh, available for freelance web development and software quality assurance work.">
+	<meta property="og:image" content="https://sharif-jobayed.github.io/Portfolio/assets/images/photos/sj_photo.jpg">
+	<meta property="og:locale" content="en_US">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Sharif Jobayed — SQA Engineer & Frontend Developer">
+	<meta name="twitter:description"
+		content="SQA Engineer and frontend developer based in Dhaka, Bangladesh, available for freelance web development and software quality assurance work.">
+	<meta name="twitter:image" content="https://sharif-jobayed.github.io/Portfolio/assets/images/photos/sj_photo.jpg">
+
+	<!-- Structured data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Sharif Jobayed",
+		"url": "https://sharif-jobayed.github.io/Portfolio/",
+		"image": "https://sharif-jobayed.github.io/Portfolio/assets/images/photos/sj_photo.jpg",
+		"jobTitle": "SQA Engineer & Frontend Developer",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Dhaka",
+			"addressCountry": "BD"
+		},
+		"email": "mailto:sharif.jobayed@gmail.com",
+		"sameAs": [
+			"https://www.linkedin.com/in/sharif-jobayed/",
+			"https://github.com/sharif-jobayed",
+			"https://www.facebook.com/sharif.jobayed",
+			"https://www.instagram.com/sharif.jobayed/",
+			"https://www.fiverr.com/users/sharif_jobayed"
+		]
+	}
+	</script>
+
+	<!-- Applies a saved/system theme before first paint to avoid a flash of the wrong colors -->
+	<script>
+		(function () {
+			try {
+				var saved = localStorage.getItem('theme');
+				if (saved === 'light' || saved === 'dark') {
+					document.documentElement.setAttribute('data-theme', saved);
+				}
+			} catch (e) { /* localStorage unavailable */ }
+		})();
+	</script>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +91,21 @@
 				<a href="#skills">Skills</a>
 				<a href="#services">Services</a>
 				<a href="#contact">Contact</a>
+
+				<div class="theme_switcher" id="theme_switcher" role="radiogroup" aria-label="Color theme">
+					<button type="button" class="theme_option" data-theme-choice="light" role="radio" aria-checked="false"
+						aria-label="Light theme">
+						<i class="fa-solid fa-sun" aria-hidden="true"></i>
+					</button>
+					<button type="button" class="theme_option" data-theme-choice="dark" role="radio" aria-checked="false"
+						aria-label="Dark theme">
+						<i class="fa-solid fa-moon" aria-hidden="true"></i>
+					</button>
+					<button type="button" class="theme_option" data-theme-choice="system" role="radio" aria-checked="false"
+						aria-label="Match system theme">
+						<i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+					</button>
+				</div>
 			</nav>
 
 			<button class="nav_toggle" id="nav_toggle" aria-label="Toggle navigation" aria-expanded="false">

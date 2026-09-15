@@ -22,14 +22,16 @@
 	--shadow_md: 0 8px 20px -6px rgba(0, 76, 76, 0.18);
 	--shadow_lg: 0 20px 45px -12px rgba(0, 76, 76, 0.28);
 	--shadow_glow: 0 0 0 4px rgba(0, 128, 128, 0.16);
+	--shadow_portrait: 0 30px 30px -18px rgba(0, 76, 76, 0.35), 0 16px 40px -8px rgba(0, 76, 76, 0.3), 0 4px 12px rgba(0, 76, 76, 0.22);
 
 	--font_heading: 'Space Grotesk', 'Inter', sans-serif;
 	--font_body: 'Inter', sans-serif;
 	--max_width: 1100px;
 }
 
+/* Explicit choice ("light") always wins, even when the OS prefers dark */
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root:not([data-theme="light"]) {
 		--bg: #0c1716;
 		--bg_alt: #10201f;
 		--text: #e7f3f2;
@@ -44,7 +46,27 @@
 		--shadow_md: 0 8px 24px -6px rgba(0, 0, 0, 0.55);
 		--shadow_lg: 0 24px 50px -14px rgba(0, 0, 0, 0.65);
 		--shadow_glow: 0 0 0 4px rgba(102, 178, 178, 0.22);
+		--shadow_portrait: 0 30px 34px -16px rgba(0, 0, 0, 0.6), 0 16px 40px -8px rgba(0, 0, 0, 0.5), 0 4px 14px rgba(0, 0, 0, 0.4);
 	}
+}
+
+/* Explicit choice ("dark") always wins, even when the OS prefers light */
+:root[data-theme="dark"] {
+	--bg: #0c1716;
+	--bg_alt: #10201f;
+	--text: #e7f3f2;
+	--text_muted: #9db8b5;
+	--border: #1c3230;
+	--accent: var(--teal_200);
+	--accent_strong: var(--teal_100);
+	--accent_text: #0c1716;
+	--card_bg: #10201f;
+
+	--shadow_sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+	--shadow_md: 0 8px 24px -6px rgba(0, 0, 0, 0.55);
+	--shadow_lg: 0 24px 50px -14px rgba(0, 0, 0, 0.65);
+	--shadow_glow: 0 0 0 4px rgba(102, 178, 178, 0.22);
+	--shadow_portrait: 0 30px 34px -16px rgba(0, 0, 0, 0.6), 0 16px 40px -8px rgba(0, 0, 0, 0.5), 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -170,6 +192,7 @@ p {
 
 .site_nav {
 	display: flex;
+	align-items: center;
 	gap: 28px;
 }
 
@@ -202,6 +225,45 @@ p {
 .site_nav a:hover::after {
 	transform: scaleX(1);
 	transform-origin: left;
+}
+
+.theme_switcher {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	padding: 3px;
+	border-radius: 999px;
+	background: var(--bg_alt);
+	border: 1px solid var(--border);
+}
+
+.theme_option {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	border: none;
+	background: transparent;
+	color: var(--text_muted);
+	font-size: 0.8rem;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.theme_option:hover {
+	color: var(--text);
+}
+
+.theme_option[aria-checked="true"] {
+	background: var(--accent);
+	color: var(--accent_text);
+	box-shadow: var(--shadow_sm);
+}
+
+.theme_option:active {
+	transform: scale(0.92);
 }
 
 .nav_toggle {
@@ -307,7 +369,7 @@ p {
 	overflow: hidden;
 	background: var(--bg_alt);
 	border: 1px solid var(--border);
-	box-shadow: var(--shadow_lg);
+	box-shadow: var(--shadow_portrait);
 	animation: float_y 6s ease-in-out infinite;
 }
 
@@ -844,6 +906,7 @@ p {
 		border-bottom: 1px solid var(--border);
 		box-shadow: var(--shadow_md);
 		flex-direction: column;
+		align-items: flex-start;
 		padding: 16px 20px;
 		gap: 16px;
 		display: none;
@@ -851,6 +914,11 @@ p {
 
 	.site_nav.open {
 		display: flex;
+	}
+
+	.theme_switcher {
+		align-self: flex-start;
+		margin-top: 4px;
 	}
 
 	.nav_toggle {

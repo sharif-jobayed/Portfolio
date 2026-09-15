@@ -37,3 +37,42 @@ navToggle.addEventListener('click', () => {
 siteNav.querySelectorAll('a').forEach((link) => {
 	link.addEventListener('click', () => setNavOpen(false));
 });
+
+// Theme switcher (light / dark / system)
+const themeOptions = document.querySelectorAll('.theme_option');
+
+function applyTheme(choice) {
+	if (choice === 'light' || choice === 'dark') {
+		document.documentElement.setAttribute('data-theme', choice);
+	} else {
+		document.documentElement.removeAttribute('data-theme');
+	}
+
+	themeOptions.forEach((btn) => {
+		btn.setAttribute('aria-checked', String(btn.dataset.themeChoice === choice));
+	});
+}
+
+function getStoredTheme() {
+	try {
+		return localStorage.getItem('theme');
+	} catch (e) {
+		return null;
+	}
+}
+
+function storeTheme(choice) {
+	try {
+		localStorage.setItem('theme', choice);
+	} catch (e) { /* localStorage unavailable */ }
+}
+
+applyTheme(getStoredTheme() || 'system');
+
+themeOptions.forEach((btn) => {
+	btn.addEventListener('click', () => {
+		const choice = btn.dataset.themeChoice;
+		storeTheme(choice);
+		applyTheme(choice);
+	});
+});
