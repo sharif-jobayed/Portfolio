@@ -14,8 +14,12 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+	<link
+		href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
 		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+		integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer">
 
 	<link rel="stylesheet" href="./assets/styles/main.css">
 	<link rel="icon"
@@ -36,7 +40,7 @@
 			</nav>
 
 			<button class="nav_toggle" id="nav_toggle" aria-label="Toggle navigation" aria-expanded="false">
-				<span></span><span></span><span></span>
+				<i class="fa-solid fa-bars" aria-hidden="true"></i>
 			</button>
 		</div>
 	</header>
@@ -54,14 +58,15 @@
 						front end that runs it. Based in Dhaka, Bangladesh, and open for freelance work.
 					</p>
 					<div class="hero_actions">
-						<a href="#contact" class="btn btn_primary">Get in touch</a>
-						<a href="#about" class="btn btn_ghost">More about me</a>
+						<a href="#contact" class="btn btn_primary"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Get in touch</a>
+						<a href="#about" class="btn btn_ghost"><i class="fa-regular fa-id-badge" aria-hidden="true"></i> More about me</a>
 					</div>
 				</div>
 
 				<div class="hero_media reveal">
 					<div class="portrait_frame">
-						<img src="./assets/images/me.jpg" alt="Portrait of Sharif Jobayed" class="portrait">
+						<img src="./assets/images/photos/sj_photo.jpg" alt="Portrait of Sharif Jobayed"
+							class="portrait">
 					</div>
 				</div>
 			</div>
@@ -71,36 +76,62 @@
 		<section class="section" id="about">
 			<div class="wrap">
 				<h2 class="section_title">About me</h2>
-				<div class="about_grid reveal">
-					<p class="about_text">
-						I graduated in English Language and Literature in 2008, then retrained in web
-						development and, since 2022, in software quality assurance &mdash; picking up
-						certifications along the way in HTML5, CSS3, modern JavaScript (ES6+), React,
-						and Java (OOP), alongside test tooling like Selenium WebDriver, WebdriverIO,
-						Playwright, TestNG, Cucumber, and Mocha.
-					</p>
-					<p class="about_text">
-						I've worked as an SQA Engineer across a few organizations, combining manual and
-						automated testing with hands-on frontend development. I'm now looking to take on
-						freelance projects and explore starting something of my own, putting that
-						full-stack view of building <em>and</em> breaking software to work for clients
-						directly.
-					</p>
 
-					<dl class="about_facts">
-						<div>
-							<dt>Based in</dt>
-							<dd>Dhaka, Bangladesh</dd>
+				<div class="about_layout">
+					<div class="about_grid reveal">
+						<p class="about_text">
+							I graduated in English Language and Literature in 2008, then retrained in web
+							development and, since 2022, in software quality assurance &mdash; picking up
+							certifications along the way in HTML5, CSS3, modern JavaScript (ES6+), React,
+							and Java (OOP), alongside test tooling like Selenium WebDriver, WebdriverIO,
+							Playwright, TestNG, Cucumber, and Mocha.
+						</p>
+						<p class="about_text">
+							I've worked as an SQA Engineer across a few organizations, combining manual and
+							automated testing with hands-on frontend development. I'm now looking to take on
+							freelance projects and explore starting something of my own, putting that
+							full-stack view of building <em>and</em> breaking software to work for clients
+							directly.
+						</p>
+
+						<dl class="about_facts">
+							<div>
+								<dt>Based in</dt>
+								<dd>Dhaka, Bangladesh</dd>
+							</div>
+							<div>
+								<dt>Focus</dt>
+								<dd>SQA &amp; Frontend Development</dd>
+							</div>
+							<div>
+								<dt>Available for</dt>
+								<dd>Freelance &amp; contract work</dd>
+							</div>
+						</dl>
+					</div>
+
+					<aside class="fiverr_card reveal">
+						<div class="fiverr_card_top">
+							<span class="fiverr_logo">
+								<i class="fa-solid fa-circle-check" aria-hidden="true"></i> fiverr<span class="fiverr_dot">.</span>
+							</span>
+							<span class="fiverr_status"><span class="status_dot"></span> Available for work</span>
 						</div>
-						<div>
-							<dt>Focus</dt>
-							<dd>SQA &amp; Frontend Development</dd>
-						</div>
-						<div>
-							<dt>Available for</dt>
-							<dd>Freelance &amp; contract work</dd>
-						</div>
-					</dl>
+
+						<h3 class="fiverr_card_name">sharif_jobayed</h3>
+						<p class="fiverr_card_role">SQA Engineer &amp; Frontend Developer</p>
+
+						<ul class="fiverr_card_tags">
+							<li>Web Development</li>
+							<li>Test Automation</li>
+							<li>Manual QA</li>
+						</ul>
+
+						<a href="https://www.fiverr.com/users/sharif_jobayed" target="_blank" rel="nofollow noopener noreferrer"
+							class="fiverr_card_cta">
+							View profile on Fiverr <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+						</a>
+					</aside>
 				</div>
 			</div>
 		</section>
@@ -112,41 +143,52 @@
 
 				<div class="skills_grid">
 					<div class="skill_card reveal">
-						<h3>Frontend Development</h3>
+						<h3><i class="fa-solid fa-code card_icon" aria-hidden="true"></i> Frontend Development</h3>
 						<ul class="tag_list">
-							<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML5</a></li>
-							<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">CSS3</a></li>
-							<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">JavaScript (ES6+)</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"
+									rel="noopener noreferrer">HTML5</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
+									rel="noopener noreferrer">CSS3</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+									rel="noopener noreferrer">JavaScript (ES6+)</a></li>
 							<li><a href="https://react.dev/" target="_blank" rel="noopener noreferrer">React</a></li>
 						</ul>
 					</div>
 
 					<div class="skill_card reveal">
-						<h3>Programming</h3>
+						<h3><i class="fa-solid fa-terminal card_icon" aria-hidden="true"></i> Programming</h3>
 						<ul class="tag_list">
 							<li><a href="https://dev.java/" target="_blank" rel="noopener noreferrer">Java</a></li>
-							<li><a href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank" rel="noopener noreferrer">Object-Oriented Programming</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank"
+									rel="noopener noreferrer">Object-Oriented Programming</a></li>
 						</ul>
 					</div>
 
 					<div class="skill_card reveal">
-						<h3>Test Automation</h3>
+						<h3><i class="fa-solid fa-robot card_icon" aria-hidden="true"></i> Test Automation</h3>
 						<ul class="tag_list">
-							<li><a href="https://www.selenium.dev/" target="_blank" rel="noopener noreferrer">Selenium WebDriver</a></li>
-							<li><a href="https://webdriver.io/" target="_blank" rel="noopener noreferrer">WebdriverIO</a></li>
-							<li><a href="https://playwright.dev/" target="_blank" rel="noopener noreferrer">Playwright</a></li>
+							<li><a href="https://www.selenium.dev/" target="_blank" rel="noopener noreferrer">Selenium
+									WebDriver</a></li>
+							<li><a href="https://webdriver.io/" target="_blank"
+									rel="noopener noreferrer">WebdriverIO</a></li>
+							<li><a href="https://playwright.dev/" target="_blank"
+									rel="noopener noreferrer">Playwright</a></li>
 							<li><a href="https://testng.org/" target="_blank" rel="noopener noreferrer">TestNG</a></li>
-							<li><a href="https://cucumber.io/" target="_blank" rel="noopener noreferrer">Cucumber</a></li>
+							<li><a href="https://cucumber.io/" target="_blank" rel="noopener noreferrer">Cucumber</a>
+							</li>
 							<li><a href="https://mochajs.org/" target="_blank" rel="noopener noreferrer">Mocha</a></li>
 						</ul>
 					</div>
 
 					<div class="skill_card reveal">
-						<h3>Quality Assurance</h3>
+						<h3><i class="fa-solid fa-clipboard-check card_icon" aria-hidden="true"></i> Quality Assurance</h3>
 						<ul class="tag_list">
-							<li><a href="https://en.wikipedia.org/wiki/Software_testing" target="_blank" rel="noopener noreferrer">Software Manual Testing</a></li>
-							<li><a href="https://en.wikipedia.org/wiki/Test_case" target="_blank" rel="noopener noreferrer">Test Case Design</a></li>
-							<li><a href="https://en.wikipedia.org/wiki/Software_bug" target="_blank" rel="noopener noreferrer">Bug &amp; Defect Reporting</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Software_testing" target="_blank"
+									rel="noopener noreferrer">Software Manual Testing</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Test_case" target="_blank"
+									rel="noopener noreferrer">Test Case Design</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Software_bug" target="_blank"
+									rel="noopener noreferrer">Bug &amp; Defect Reporting</a></li>
 						</ul>
 					</div>
 				</div>
@@ -160,18 +202,21 @@
 
 				<div class="services_grid">
 					<div class="service_card reveal">
+						<i class="fa-solid fa-code service_icon" aria-hidden="true"></i>
 						<h3>Frontend Development</h3>
 						<p>Responsive, modern websites built with HTML5, CSS3, JavaScript, and React
 							&mdash; from landing pages to full portfolio sites.</p>
 					</div>
 
 					<div class="service_card reveal">
+						<i class="fa-solid fa-robot service_icon" aria-hidden="true"></i>
 						<h3>Test Automation</h3>
 						<p>Automated test suites with Selenium WebDriver, WebdriverIO, or Playwright,
 							paired with TestNG, Cucumber, or Mocha for readable, maintainable coverage.</p>
 					</div>
 
 					<div class="service_card reveal">
+						<i class="fa-solid fa-magnifying-glass service_icon" aria-hidden="true"></i>
 						<h3>Manual &amp; QA Testing</h3>
 						<p>Thorough manual testing, test case design, and clear bug/defect reporting to
 							catch issues before your users do.</p>
@@ -196,7 +241,8 @@
 						<input type="email" id="email" name="email" placeholder="your.email@example.com" required>
 
 						<label for="message">Message</label>
-						<textarea id="message" name="message" placeholder="Tell me about your project" required></textarea>
+						<textarea id="message" name="message" placeholder="Tell me about your project"
+							required></textarea>
 
 						<button type="submit" class="btn btn_primary">Send message</button>
 					</form>
@@ -207,62 +253,56 @@
 					<ul class="link_list">
 						<li>
 							<a href="mailto:sharif.jobayed@gmail.com" class="link_card">
-								<span class="link_icon" aria-hidden="true">
-									<svg viewBox="0 0 24 24" fill="none"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-								</span>
+								<span class="link_icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
 								<span class="link_body">
 									<span class="link_label">Email</span>
 									<span class="link_value">sharif.jobayed@gmail.com</span>
 								</span>
-								<span class="link_arrow" aria-hidden="true">&rarr;</span>
+								<span class="link_arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.linkedin.com/in/sharif-jobayed/" target="_blank" rel="noopener noreferrer" class="link_card">
-								<span class="link_icon" aria-hidden="true">
-									<svg viewBox="0 0 24 24" fill="none"><path d="M6.94 8.5H4V20h2.94V8.5ZM5.47 6.9a1.7 1.7 0 1 0 0-3.4 1.7 1.7 0 0 0 0 3.4ZM20 20v-6.4c0-3.06-1.63-4.48-3.81-4.48-1.76 0-2.55.97-2.99 1.65V8.5H10.26c.04.86 0 11.5 0 11.5h2.94v-6.42c0-.34.02-.68.13-.93.28-.68.9-1.39 1.96-1.39 1.38 0 1.93 1.05 1.93 2.6V20H20Z" fill="currentColor"/></svg>
-								</span>
+							<a href="https://www.linkedin.com/in/sharif-jobayed/" target="_blank"
+								rel="noopener noreferrer" class="link_card">
+								<span class="link_icon" aria-hidden="true"><i class="fa-brands fa-linkedin"></i></span>
 								<span class="link_body">
 									<span class="link_label">LinkedIn</span>
 									<span class="link_value">/in/sharif-jobayed</span>
 								</span>
-								<span class="link_arrow" aria-hidden="true">&rarr;</span>
+								<span class="link_arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
 							</a>
 						</li>
 						<li>
-							<a href="https://github.com/sharif-jobayed" target="_blank" rel="noopener noreferrer" class="link_card">
-								<span class="link_icon" aria-hidden="true">
-									<svg viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5.01 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.71 1.03 1.6 1.03 2.7 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
-								</span>
+							<a href="https://github.com/sharif-jobayed" target="_blank" rel="noopener noreferrer"
+								class="link_card">
+								<span class="link_icon" aria-hidden="true"><i class="fa-brands fa-github"></i></span>
 								<span class="link_body">
 									<span class="link_label">GitHub</span>
 									<span class="link_value">@sharif-jobayed</span>
 								</span>
-								<span class="link_arrow" aria-hidden="true">&rarr;</span>
+								<span class="link_arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.facebook.com/sharif.jobayed" target="_blank" rel="noopener noreferrer" class="link_card">
-								<span class="link_icon" aria-hidden="true">
-									<svg viewBox="0 0 24 24" fill="none"><path d="M13.5 21v-7.2h2.4l.5-3h-2.9V9c0-.83.26-1.4 1.5-1.4h1.5V5.1c-.5-.06-1.4-.17-2.32-.17-2.3 0-3.68 1.35-3.68 3.83v2.05H8v3h2.5V21h3Z" fill="currentColor"/></svg>
-								</span>
+							<a href="https://www.facebook.com/sharif.jobayed" target="_blank" rel="noopener noreferrer"
+								class="link_card">
+								<span class="link_icon" aria-hidden="true"><i class="fa-brands fa-facebook"></i></span>
 								<span class="link_body">
 									<span class="link_label">Facebook</span>
 									<span class="link_value">sharif.jobayed</span>
 								</span>
-								<span class="link_arrow" aria-hidden="true">&rarr;</span>
+								<span class="link_arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com/sharif.jobayed/" target="_blank" rel="noopener noreferrer" class="link_card">
-								<span class="link_icon" aria-hidden="true">
-									<svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.6"/><circle cx="16.9" cy="7.1" r="1" fill="currentColor"/></svg>
-								</span>
+							<a href="https://www.instagram.com/sharif.jobayed/" target="_blank"
+								rel="noopener noreferrer" class="link_card">
+								<span class="link_icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
 								<span class="link_body">
 									<span class="link_label">Instagram</span>
 									<span class="link_value">@sharif.jobayed</span>
 								</span>
-								<span class="link_arrow" aria-hidden="true">&rarr;</span>
+								<span class="link_arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
 							</a>
 						</li>
 					</ul>

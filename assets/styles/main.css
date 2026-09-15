@@ -206,28 +206,23 @@ p {
 
 .nav_toggle {
 	display: none;
-	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-	gap: 5px;
 	width: 36px;
 	height: 36px;
 	background: none;
 	border: none;
 	cursor: pointer;
 	padding: 0;
-}
-
-.nav_toggle span {
-	display: block;
-	height: 2px;
-	width: 100%;
-	background: var(--text);
-	border-radius: 2px;
+	color: var(--text);
+	font-size: 1.2rem;
 }
 
 /* Buttons */
 .btn {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
 	padding: 12px 24px;
 	border-radius: 8px;
 	font-weight: 600;
@@ -337,10 +332,16 @@ p {
 }
 
 /* About */
+.about_layout {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	gap: 40px;
+	align-items: start;
+}
+
 .about_grid {
 	display: grid;
 	gap: 16px;
-	max-width: 720px;
 }
 
 .about_text {
@@ -370,6 +371,128 @@ p {
 	font-weight: 600;
 }
 
+/* Fiverr card */
+.fiverr_card {
+	position: relative;
+	background: var(--card_bg);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 28px 24px;
+	box-shadow: var(--shadow_md);
+	overflow: hidden;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fiverr_card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: #1dbf73;
+}
+
+.fiverr_card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--shadow_lg);
+}
+
+.fiverr_card_top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.fiverr_logo {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-family: var(--font_heading);
+	font-weight: 700;
+	font-size: 1.15rem;
+	color: #1dbf73;
+	text-transform: lowercase;
+}
+
+.fiverr_logo i {
+	font-size: 0.9rem;
+}
+
+.fiverr_dot {
+	color: #1dbf73;
+}
+
+.fiverr_status {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 0.78rem;
+	font-weight: 600;
+	color: var(--text_muted);
+}
+
+.status_dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #1dbf73;
+	box-shadow: 0 0 0 3px color-mix(in srgb, #1dbf73 20%, transparent);
+}
+
+.fiverr_card_name {
+	font-size: 1.2rem;
+	margin-bottom: 2px;
+}
+
+.fiverr_card_role {
+	color: var(--text_muted);
+	font-size: 0.9rem;
+	margin-bottom: 18px;
+}
+
+.fiverr_card_tags {
+	list-style: none;
+	margin: 0 0 22px;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.fiverr_card_tags li {
+	background: var(--bg_alt);
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	padding: 5px 12px;
+	font-size: 0.78rem;
+	color: var(--text_muted);
+}
+
+.fiverr_card_cta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+	padding: 12px 20px;
+	border-radius: 8px;
+	background: #1dbf73;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 0.95rem;
+	transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fiverr_card_cta:hover {
+	background: #19a463;
+	transform: translateY(-2px);
+	box-shadow: var(--shadow_md);
+}
+
 /* Skills */
 .skills_grid {
 	display: grid;
@@ -397,8 +520,16 @@ p {
 }
 
 .skill_card h3 {
+	display: flex;
+	align-items: center;
+	gap: 10px;
 	font-size: 1.05rem;
 	margin-bottom: 14px;
+}
+
+.card_icon {
+	color: var(--accent);
+	font-size: 1rem;
 }
 
 .tag_list {
@@ -470,6 +601,19 @@ p {
 	transform: translateY(-6px);
 	box-shadow: var(--shadow_lg);
 	border-color: var(--teal_200);
+}
+
+.service_icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	margin-bottom: 14px;
+	border-radius: 12px;
+	background: color-mix(in srgb, var(--accent) 14%, transparent);
+	color: var(--accent);
+	font-size: 1.1rem;
 }
 
 .service_card h3 {
@@ -574,9 +718,8 @@ p {
 	transition: background 0.2s ease, color 0.2s ease;
 }
 
-.link_icon svg {
-	width: 20px;
-	height: 20px;
+.link_icon i {
+	font-size: 1.05rem;
 }
 
 .link_card:hover .link_icon {
@@ -631,17 +774,55 @@ p {
 }
 
 /* Responsive */
+@media (min-width: 1400px) {
+	:root {
+		--max_width: 1200px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.hero {
+		padding: 80px 0 56px;
+	}
+
+	.section {
+		padding: 60px 0;
+	}
+}
+
+@media (max-width: 900px) {
+	.about_facts {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.about_layout {
+		grid-template-columns: 1fr;
+	}
+}
+
 @media (max-width: 800px) {
 	.hero_inner {
 		grid-template-columns: 1fr;
+		gap: 32px;
+		text-align: center;
 	}
 
 	.hero_media {
 		order: -1;
 	}
 
+	.hero_lede {
+		max-width: none;
+		margin-inline: auto;
+	}
+
+	.hero_actions {
+		justify-content: center;
+	}
+
 	.contact_grid {
 		grid-template-columns: 1fr;
+		gap: 40px;
 	}
 
 	.about_facts {
@@ -650,6 +831,10 @@ p {
 }
 
 @media (max-width: 640px) {
+	.wrap {
+		padding: 0 20px;
+	}
+
 	.site_nav {
 		position: absolute;
 		top: 68px;
@@ -657,8 +842,9 @@ p {
 		right: 0;
 		background: var(--bg);
 		border-bottom: 1px solid var(--border);
+		box-shadow: var(--shadow_md);
 		flex-direction: column;
-		padding: 16px 24px;
+		padding: 16px 20px;
 		gap: 16px;
 		display: none;
 	}
@@ -669,5 +855,103 @@ p {
 
 	.nav_toggle {
 		display: flex;
+	}
+
+	.header_inner {
+		height: 60px;
+	}
+
+	.hero {
+		padding: 56px 0 40px;
+	}
+
+	.section {
+		padding: 48px 0;
+	}
+
+	.section_title {
+		margin-bottom: 24px;
+	}
+
+	.skills_grid,
+	.services_grid {
+		grid-template-columns: 1fr;
+	}
+
+	.skill_card,
+	.service_card {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.wrap {
+		padding: 0 16px;
+	}
+
+	.brand {
+		font-size: 1.05rem;
+	}
+
+	.portrait_frame {
+		width: min(200px, 70vw);
+	}
+
+	.hero_actions {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.hero_actions .btn {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.tag_list a {
+		font-size: 0.8rem;
+		padding: 5px 12px 5px 10px;
+	}
+
+	.link_card {
+		padding: 12px;
+		gap: 10px;
+	}
+
+	.link_icon {
+		width: 34px;
+		height: 34px;
+	}
+
+	.link_icon i {
+		font-size: 0.9rem;
+	}
+
+	.contact_form button {
+		align-self: stretch;
+	}
+}
+
+@media (max-width: 360px) {
+	.about_facts {
+		grid-template-columns: 1fr;
+	}
+
+	.eyebrow {
+		font-size: 0.8rem;
+	}
+}
+
+/* Short / landscape viewports (e.g. phones rotated) */
+@media (max-height: 480px) and (orientation: landscape) {
+	.hero {
+		padding: 40px 0 32px;
+	}
+
+	.portrait_frame {
+		width: min(160px, 40vh);
+	}
+
+	.section {
+		padding: 40px 0;
 	}
 }

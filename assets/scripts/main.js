@@ -21,15 +21,19 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
 
 const navToggle = document.getElementById('nav_toggle');
 const siteNav = document.getElementById('site_nav');
+const navToggleIcon = navToggle.querySelector('i');
+
+function setNavOpen(isOpen) {
+	siteNav.classList.toggle('open', isOpen);
+	navToggle.setAttribute('aria-expanded', isOpen);
+	navToggleIcon.classList.toggle('fa-bars', !isOpen);
+	navToggleIcon.classList.toggle('fa-xmark', isOpen);
+}
 
 navToggle.addEventListener('click', () => {
-	const isOpen = siteNav.classList.toggle('open');
-	navToggle.setAttribute('aria-expanded', isOpen);
+	setNavOpen(!siteNav.classList.contains('open'));
 });
 
 siteNav.querySelectorAll('a').forEach((link) => {
-	link.addEventListener('click', () => {
-		siteNav.classList.remove('open');
-		navToggle.setAttribute('aria-expanded', 'false');
-	});
+	link.addEventListener('click', () => setNavOpen(false));
 });
