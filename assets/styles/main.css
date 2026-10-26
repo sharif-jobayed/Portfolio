@@ -646,6 +646,7 @@ p {
 
 .services_grid .reveal:nth-child(2) { transition-delay: 0.08s; }
 .services_grid .reveal:nth-child(3) { transition-delay: 0.16s; }
+.services_grid .reveal:nth-child(4) { transition-delay: 0.24s; }
 
 .service_card {
 	padding: 24px;
@@ -683,6 +684,49 @@ p {
 .service_card p {
 	color: var(--text_muted);
 	margin: 0;
+}
+
+/* Experience cards */
+.exp_meta {
+	color: var(--text_muted);
+	font-size: 0.85rem;
+	margin: 0 0 3px;
+}
+
+.exp_meta:first-of-type {
+	margin-top: -4px;
+}
+
+.exp_list {
+	list-style: none;
+	margin: 12px 0 0;
+	padding: 0;
+	display: grid;
+	gap: 6px;
+	font-size: 0.9rem;
+	color: var(--text_muted);
+}
+
+.exp_list li {
+	position: relative;
+	padding-left: 15px;
+	line-height: 1.45;
+}
+
+.exp_list li::before {
+	content: '';
+	position: absolute;
+	top: 0.6em;
+	left: 0;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: var(--accent);
+}
+
+.exp_list + .exp_meta {
+	margin-top: 12px;
+	font-style: italic;
 }
 
 /* Contact */
@@ -847,6 +891,10 @@ p {
 	.section {
 		padding: 60px 0;
 	}
+
+	#experience .services_grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 @media (max-width: 900px) {
@@ -939,7 +987,8 @@ p {
 	}
 
 	.skills_grid,
-	.services_grid {
+	.services_grid,
+	#experience .services_grid {
 		grid-template-columns: 1fr;
 	}
 
